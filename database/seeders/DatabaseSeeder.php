@@ -15,9 +15,18 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        // Clear the database
+        User::truncate();
+        
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+        ]);
+        
+        $this->call([
+            QuizSeeder::class,
+            CallToActionSeeder::class,
+            LessonSeeder::class,
         ]);
     }
 }

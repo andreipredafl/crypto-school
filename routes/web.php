@@ -9,6 +9,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
+    
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
