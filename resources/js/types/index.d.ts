@@ -36,10 +36,29 @@ export interface User {
     updated_at: string;
 }
 
-export type BreadcrumbItemType = BreadcrumbItem;
-
 export interface Lesson {
     id: number;
-    slug: string;
     title: string;
+    slug: string;
+    description: string;
+    thumbnail_url: string | null;
+    duration: number | null;
+    formatted_duration: string | '00:00';
+}
+
+export interface PaginationLink {
+    url: string | null;
+    label: string;
+    active: boolean;
+}
+
+export interface PaginatedResponse<T> {
+    data: T[];
+    current_page: number;
+    last_page: number;
+    links: PaginationLink[];
+    from: number;
+    to: number;
+    total: number;
+    per_page: number;
 }

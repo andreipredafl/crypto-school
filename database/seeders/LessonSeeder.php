@@ -21,7 +21,6 @@ class LessonSeeder extends Seeder
             [
                 'title' => 'Trading Xcelerator',
                 'description' => 'The Trading Xcelerator offers a fast-track system for mastering trading with simplified strategies, advanced tools, automation, and a supportive community for confident, profitable results.',
-                // 'video_url' => 'https://www.youtube-nocookie.com/embed/iA3yoCP750c?controls=0&disablekb=1&fs=1&modestbranding=1&autoplay=1&mute=0&loop=0&playsinline=1&color=white&cc_load_policy=3&iv_load_policy=3&origin=https%3A%2F%2Fschool.cryptobanter.com&widget_referrer=https%3A%2F%2Fschool.cryptobanter.com&hl=en&rel=0&showinfo=0&playlist=iA3yoCP750c&endscreen=0&annotations=0&related=0&norelated=1&enablejsapi=1&autohide=1',
                 'video_url' => 'https://www.youtube-nocookie.com/embed/iA3yoCP750c',
                 'thumbnail_url' => 'https://img.youtube.com/vi/iA3yoCP750c/hqdefault.jpg',
                 'duration' => 244,
@@ -38,8 +37,8 @@ class LessonSeeder extends Seeder
             [
                 'title' => 'Understanding Blockchain Technology',
                 'description' => 'Dive deep into the technology that powers cryptocurrencies. Learn how blockchain works, why it\'s secure, and how it enables trustless transactions.',
-                'video_url' => 'https://www.youtube.com/watch?v=rYQgy8QDEBI',
-                'thumbnail_url' => null,
+                'video_url' => 'https://www.youtube-nocookie.com/embed/iA3yoCP750c',
+                'thumbnail_url' => 'https://img.youtube.com/vi/iA3yoCP750c/hqdefault.jpg',
                 'duration' => 1800,
                 'popup_seconds_before_end' => 15,
             ],
@@ -52,18 +51,9 @@ class LessonSeeder extends Seeder
                 'popup_seconds_before_end' => 12,
             ],
             [
-                'title' => 'Crypto Wallets Explained',
-                'description' => 'Learn about different types of cryptocurrency wallets, how to secure your digital assets, and best practices for managing your crypto holdings safely.',
-                'video_url' => 'https://www.youtube.com/watch?v=JIJzysNeGCc',
-                'thumbnail_url' => 'https://img.youtube.com/vi/JIJzysNeGCc/hqdefault.jpg',
-                'duration' => 1380,
-                'popup_seconds_before_end' => 10,
-            ],
-            [
                 'title' => 'Introduction to DeFi',
                 'description' => 'Discover Decentralized Finance (DeFi) and how it\'s creating an open financial system. Learn about lending, borrowing, and earning yields without traditional intermediaries.',
                 'video_url' => 'https://www.youtube.com/watch?v=H-O3r2YMWJ4',
-                'thumbnail_url' => 'https://img.youtube.com/vi/H-O3r2YMWJ4/hqdefault.jpg',
                 'duration' => 1920,
                 'popup_seconds_before_end' => 15,
             ],
@@ -74,13 +64,6 @@ class LessonSeeder extends Seeder
                 'thumbnail_url' => 'https://img.youtube.com/vi/Yo9o5nDTAAQ/hqdefault.jpg',
                 'duration' => 1560,
                 'popup_seconds_before_end' => 12,
-            ],
-            [
-                'title' => 'Crypto Trading Strategies',
-                'description' => 'Learn basic trading strategies for cryptocurrency markets. Understand market trends, technical analysis, and risk management principles.',
-                'video_url' => 'https://www.youtube.com/watch?v=ltcnTRsHgQY',
-                'duration' => 2100,
-                'popup_seconds_before_end' => 15,
             ],
             [
                 'title' => 'Tokenomics and Evaluating Projects',
