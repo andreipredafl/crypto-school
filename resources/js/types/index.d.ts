@@ -37,3 +37,9 @@ export interface User {
 }
 
 export type BreadcrumbItemType = BreadcrumbItem;
+
+export interface Lesson {
+    id: number;
+    slug: string;
+    title: string;
+}
