@@ -2,6 +2,7 @@
 	import AppContent from "@/components/AppContent.vue";
 	import AppHeader from "@/components/AppHeader.vue";
 	import AppShell from "@/components/AppShell.vue";
+	import AppFooter from "@/components/AppFooter.vue";
 	import type { BreadcrumbItem } from "@/types";
 
 	interface Props {
@@ -19,5 +20,6 @@
 		<AppContent>
 			<slot />
 		</AppContent>
+		<AppFooter />
 	</AppShell>
 </template>
