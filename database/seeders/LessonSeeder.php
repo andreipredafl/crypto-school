@@ -21,7 +21,7 @@ class LessonSeeder extends Seeder
             [
                 'title' => 'Trading Xcelerator',
                 'description' => 'The Trading Xcelerator offers a fast-track system for mastering trading with simplified strategies, advanced tools, automation, and a supportive community for confident, profitable results.',
-                'video_url' => 'https://www.youtube-nocookie.com/embed/iA3yoCP750c',
+                'video_url' => 'https://www.youtube.com/embed/iA3yoCP750c',
                 'thumbnail_url' => 'https://img.youtube.com/vi/iA3yoCP750c/hqdefault.jpg',
                 'duration' => 244,
                 'popup_seconds_before_end' => 10,
@@ -37,7 +37,7 @@ class LessonSeeder extends Seeder
             [
                 'title' => 'Understanding Blockchain Technology',
                 'description' => 'Dive deep into the technology that powers cryptocurrencies. Learn how blockchain works, why it\'s secure, and how it enables trustless transactions.',
-                'video_url' => 'https://www.youtube-nocookie.com/embed/iA3yoCP750c',
+                'video_url' => 'https://www.youtube.com/embed/iA3yoCP750c',
                 'thumbnail_url' => 'https://img.youtube.com/vi/iA3yoCP750c/hqdefault.jpg',
                 'duration' => 1800,
                 'popup_seconds_before_end' => 15,
@@ -98,6 +98,16 @@ class LessonSeeder extends Seeder
         $quizzes = Quiz::all();
         $ctas = CallToAction::all();
 
+        $ctaIndex = 0;
+
+        $ctaIndex = 0;
+
+        $ctaIndex = 0;
+
+        $ctaIndex = 0;
+
+        $ctaIndex = 0;
+
         foreach ($lessonData as $index => $data) {
             $lesson = [
                 'title' => $data['title'],
@@ -107,16 +117,19 @@ class LessonSeeder extends Seeder
                 'thumbnail_url' => $data['thumbnail_url'] ?? null,
                 'duration' => $data['duration'],
                 'is_published' => true,
-                'popup_seconds_before_end' => $data['popup_seconds_before_end'],
             ];
 
-            if ($index < 6 && $index < $quizzes->count()) {
-                $lesson['popup_type'] = Quiz::class;
-                $lesson['popup_id'] = $quizzes[$index]->id;
-            } 
-            elseif ($index < 10 && ($index - 6) < $ctas->count()) {
-                $lesson['popup_type'] = CallToAction::class;
-                $lesson['popup_id'] = $ctas[$index - 6]->id;
+            if (!in_array($index, [2, 4])) {
+                if ($index % 2 == 0 && $index < $quizzes->count()) {
+                    $lesson['popup_type'] = Quiz::class;
+                    $lesson['popup_id'] = $quizzes[$index]->id;
+                } elseif ($index % 2 == 1 && $ctaIndex < $ctas->count()) {
+                    $lesson['popup_type'] = CallToAction::class;
+                    $lesson['popup_id'] = $ctas[$ctaIndex]->id;
+                    $ctaIndex++;
+                }
+                
+                $lesson['popup_seconds_before_end'] = $data['popup_seconds_before_end'];
             }
 
             Lesson::create($lesson);

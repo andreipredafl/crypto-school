@@ -45,4 +45,13 @@ class Lesson extends Model
 
         return sprintf('%02d:%02d', $minutes, $seconds);
     }
+    
+    public function getPopupTypeLabelAttribute(): ?string
+    {
+        return match ($this->popup_type) {
+            \App\Models\Quiz::class => 'quiz',
+            \App\Models\CallToAction::class => 'cta',
+            default => null,
+        };
+    }
 }

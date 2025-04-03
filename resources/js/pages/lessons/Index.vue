@@ -56,6 +56,11 @@
 
 						<CardHeader class="pb-2">
 							<CardTitle class="line-clamp-1">{{ lesson.title }}</CardTitle>
+
+							<!-- Type of lesson -->
+							<div class="text-sm text-muted-foreground">
+								{{ lesson.popup_type }}
+							</div>
 						</CardHeader>
 
 						<CardContent class="pb-2">

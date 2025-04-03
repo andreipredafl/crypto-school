@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('duration')->nullable()->comment('Duration in seconds');
             $table->boolean('is_published')->default(true);
             
-            $table->integer('popup_seconds_before_end')->default(10)->comment('Seconds before video ends');
+            $table->integer('popup_seconds_before_end')->nullable()->comment('Seconds before video ends');
             $table->nullableMorphs('popup'); // creates popup_type and popup_id by polymorphic relationship
             
             $table->timestamps();

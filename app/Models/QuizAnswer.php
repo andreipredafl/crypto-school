@@ -20,6 +20,12 @@ class QuizAnswer extends Model
         'is_correct' => 'boolean',
     ];
     
+    protected $hidden = [
+        'is_correct',
+        'created_at',
+        'updated_at',
+    ];
+    
     public function quiz(): BelongsTo
     {
         return $this->belongsTo(Quiz::class);

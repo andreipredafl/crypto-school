@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('description');
             $table->string('button_text');
             $table->string('button_url');
-            $table->string('button_color');
+            $table->string('button_text_color');
+            $table->string('button_bg_color');
             $table->timestamps();
         });
     }

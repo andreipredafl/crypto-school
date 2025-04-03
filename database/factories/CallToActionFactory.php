@@ -22,7 +22,8 @@ class CallToActionFactory extends Factory
             'description' => $this->faker->sentence(mt_rand(8, 12)),
             'button_text' => $this->faker->words(mt_rand(1, 3), true),
             'button_url' => $this->faker->url(),
-            'button_color' => $this->faker->hexColor(),
+            'button_text_color' => $this->faker->hexColor(),
+            'button_bg_color' => $this->faker->hexColor(),
         ];
     }
 }

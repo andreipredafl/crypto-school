@@ -17,7 +17,8 @@ class CallToAction extends Model
         'description',
         'button_text',
         'button_url',
-        'button_color',
+        'button_text_color',
+        'button_bg_color',
     ];
 
     public function lesson(): MorphOne

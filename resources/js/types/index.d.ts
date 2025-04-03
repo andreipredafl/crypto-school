@@ -41,9 +41,13 @@ export interface Lesson {
     title: string;
     slug: string;
     description: string;
+    video_url: string;
     thumbnail_url: string | null;
     duration: number | null;
     formatted_duration: string | '00:00';
+    popup_seconds_before_end?: number;
+    popup_type?: 'quiz' | 'cta';
+    popup_data?: PopupData;
 }
 
 export interface PaginationLink {
@@ -62,3 +66,37 @@ export interface PaginatedResponse<T> {
     total: number;
     per_page: number;
 }
+
+export interface QuizData {
+    question: string;
+    answers: Array<{
+        text: string;
+        isCorrect?: boolean;
+        [key: string]: any;
+    }>;
+}
+
+export interface CtaData {
+    title: string;
+    description: string;
+    button: {
+        text: string;
+        url: string;
+        bgColor?: string;
+        color?: string;
+    };
+}
+
+export type PopupData = QuizData | CtaData;
+
+export declare global {
+    interface Window {
+        YT: any;
+        onYouTubeIframeAPIReady: () => void;
+    }
+}
+
+/*
+    I also included Youtube types
+    More details in file tsconfig.json at typeRoots and types
+*/
