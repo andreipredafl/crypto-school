@@ -1,4 +1,4 @@
-import VideoPlayer from '@/components/VideoPlayer/VideoPlayer.vue';
+import VideoPlayer from '@/components/video-player/VideoPlayer.vue';
 import type { CtaData, QuizData } from '@/types';
 import type { Meta, StoryObj } from '@storybook/vue3';
 

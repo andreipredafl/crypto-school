@@ -2,7 +2,7 @@
 	import AppLayout from "@/layouts/AppLayout.vue";
 	import { Head, usePage } from "@inertiajs/vue3";
 	import { type BreadcrumbItem, type Lesson } from "@/types";
-	import VideoPlayer from "@/components/VideoPlayer/VideoPlayer.vue";
+	import VideoPlayer from "@/components/video-player/VideoPlayer.vue";
 
 	const page = usePage<{ lesson: Lesson }>();
 	const lesson = page.props.lesson;
