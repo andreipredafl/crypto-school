@@ -9,7 +9,7 @@
 		SkipForward,
 		Rewind,
 	} from "lucide-vue-next";
-	import VideoPopup from "@/components/VideoPlayer/VideoPopup.vue";
+	import VideoPlayerPopup from "@/components/video-player/VideoPlayerPopup.vue";
 	import type { QuizData, CtaData } from "@/types";
 
 	export type PopupData = QuizData | CtaData;
@@ -304,7 +304,7 @@
 			</div>
 		</div>
 
-		<VideoPopup
+		<VideoPlayerPopup
 			v-if="showPopup"
 			:type="popupType"
 			:data="props.popupData"

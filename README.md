@@ -33,12 +33,18 @@ A simple Laravel 12 + Vue 3 (Inertia + TypeScript + Tailwind) application for ma
     - Create a local database
     - Update `.env` with your database credentials
 
-7. Run migrations:  
+7. Run migrations:
    `php artisan migrate`
+8. Run seeders:
+   `php artisan db:seed`
 
-8. Start the development servers:  
+9. Start the development servers:  
    `npm run dev`
    `php artisan serve`
+10. Go to the `/login` page:
+
+    - The test user is: `test@example.com`
+    - Password: password
 
 ## Optional: run with laravel valet
 
@@ -54,7 +60,7 @@ This project uses **Storybook** to develop and test the video player component i
 - To start Storybook, use `npm run storybook`, then open [http://localhost:6006/](http://localhost:6006/) in your browser
 - To build Storybook for production, use `npm run build-storybook`
 - Story for the VideoPlayer is located in:  
-  `/resources/js/components/VideoPlayer/VideoPlayer.stories.ts`
+  `/resources/js/components/video-player/VideoPlayer.stories.ts`
 
 ---
 

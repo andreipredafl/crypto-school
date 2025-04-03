@@ -10,10 +10,6 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['auth']], function () {
     
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-    
     Route::get('/lessons', [LessonController::class, 'index'])->name('lessons.index');
     Route::get('/lessons/{lesson:slug}', [LessonController::class, 'show'])->name('lessons.show');
 
