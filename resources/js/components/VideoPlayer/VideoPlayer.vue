@@ -14,6 +14,7 @@
 
 	export type PopupData = QuizData | CtaData;
 
+	const delaultLogoUrl = "https://fxpro.news/wp-content/uploads/2025/01/image-28.png";
 	const props = withDefaults(
 		defineProps<{
 			videoUrl: string;
@@ -27,7 +28,7 @@
 		}>(),
 		{
 			title: "",
-			logoUrl: "",
+			logoUrl: delaultLogoUrl,
 			progressBarColor: "#10B981",
 			controlsColor: "#ffffff",
 			popupSecondsBeforeEnd: 10,
@@ -228,16 +229,12 @@
 		id="video-container"
 		class="relative w-full aspect-video bg-black rounded-lg overflow-hidden"
 	>
-		<!-- Player container -->
+		<!-- Container -->
 		<div id="youtube-player" class="w-full h-full"></div>
 
 		<!-- Overlay -->
 		<div class="absolute top-7 left-7 z-10">
-			<img
-				src="https://dasq5kvfrtkjz.cloudfront.net/613d6cb6-ea50-4940-89bc-528a0f7e14a4/assets/logo_CryptoSchool-626x556.png"
-				alt="Logo"
-				class="h-20 w-auto"
-			/>
+			<img :src="logoUrl" alt="Logo image" class="h-20 w-auto" />
 		</div>
 
 		<div
@@ -250,7 +247,7 @@
 			class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent flex flex-col gap-2 z-20"
 			:style="{ color: controlsColor }"
 		>
-			<!-- Progress Bar -->
+			<!-- Progress bar -->
 			<div class="w-full h-2 bg-white/20 rounded cursor-pointer relative" @click="seekTo">
 				<div
 					class="h-full rounded absolute top-0 left-0"
@@ -258,7 +255,7 @@
 				></div>
 			</div>
 
-			<!-- Controls Row -->
+			<!-- Controls row -->
 			<div class="flex items-center justify-between">
 				<div class="flex items-center gap-4">
 					<button
